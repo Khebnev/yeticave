@@ -3,10 +3,49 @@
 	//Присваиваем рандомное значение 1 или 0
 	$is_auth = (bool) rand(0, 1);
 
-	$user_name = 'Константин';	
+	$user_name = 'Антон';	
 
 	//Присваиваем картинку переменной
 	$user_avatar = "img/user.jpg";
+	$categories = ["Доски и лыжи", "Крепления", "Ботинки", "Одежда", "Инструменты", "Разное"];
+	$categoryList = [
+		0 => [
+			'name' => '2014 Rossignol District Snowboard',
+			'category' => 'Доски и лыжи',
+			'price' => '10999',
+			'pic' => 'img/lot-1.jpg'
+		],
+		1 => [
+			'name' => 'DC Ply Mens 2016/2017 Snowboard',
+			'category' => 'Доски и лыжи',
+			'price' => '159999',
+			'pic' => 'img/lot-2.jpg'
+		],
+		2 => [
+			'name' => 'Крепления Unicon Contract Pro 2015 года ращмер L/XL',
+			'category' => 'Крепления',
+			'price' => '8000',
+			'pic' => 'img/lot-3.jpg'
+		],
+		3 => [
+			'name' => 'Ботинки для сноуборда DC Mutiny Charocal',
+			'category' => 'Ботинки',
+			'price' => '10999',
+			'pic' => 'img/lot-4.jpg'
+		],
+		4 => [
+			'name' => 'Куртка для сноуборда DC Mutiny Charocal',
+			'category' => 'Одежда',
+			'price' => '7500',
+			'pic' => 'img/lot-5.jpg'
+		],
+		5 => [
+			'name' => 'Маска Oakley Canopy',
+			'category' => 'Разное',
+			'price' => '5400',
+			'pic' => 'img/lot-6.jpg'
+		]
+	];
 ?>
 <!DOCTYPE html>
 <html lang="ru">
@@ -119,24 +158,16 @@
 <footer class="main-footer">
     <nav class="nav">
         <ul class="nav__list container">
-            <li class="nav__item">
-                <a href="all-lots.html">Доски и лыжи</a>
-            </li>
-            <li class="nav__item">
-                <a href="all-lots.html">Крепления</a>
-            </li>
-            <li class="nav__item">
-                <a href="all-lots.html">Ботинки</a>
-            </li>
-            <li class="nav__item">
-                <a href="all-lots.html">Одежда</a>
-            </li>
-            <li class="nav__item">
-                <a href="all-lots.html">Инструменты</a>
-            </li>
-            <li class="nav__item">
-                <a href="all-lots.html">Разное</a>
-            </li>
+
+  			 <?php 
+  			 	$index = 0;
+  			 	$num_cat = count($categories);
+
+  			 	while($index < $num_cat) {
+  			 		print('<li class="nav__item">' . '<a href="all-lots.html">' . $categories[$index] . '</a>' . '</li>');
+  			 		$index = $index + 1;
+  			 	} ?>
+  	
         </ul>
     </nav>
     <div class="main-footer__bottom container">
