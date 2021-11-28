@@ -161,9 +161,9 @@
 
   			 <?php 
   			 	$index = 0;
-  			 	$num_cat = count($categories);
+  			 	$num_count = count($categories);
 
-  			 	while($index < $num_cat) {
+  			 	while($index < $num_count) {
   			 		print('<li class="nav__item">' . '<a href="all-lots.html">' . $categories[$index] . '</a>' . '</li>');
   			 		$index = $index + 1;
   			 	} ?>
