@@ -46,6 +46,19 @@
 			'pic' => 'img/lot-6.jpg'
 		]
 	];
+	//Функция
+	function num_format($num){
+		$num_ceil = ceil($num);
+		if($num_ceil > 1000) {
+			$num_f = number_format($num_ceil);
+			return $num_f;
+		} else {
+			$num_f = num_ceil;
+			return $num_f;
+		}
+	}
+	$result = num_format(1001);
+	print($result);
 ?>
 <!DOCTYPE html>
 <html lang="ru">
@@ -145,8 +158,15 @@
 	                    <h3 class="lot__title"><a class="text-link" href="lot.html"><?=$item['name'];?></a></h3>
 	                    <div class="lot__state">
 	                        <div class="lot__rate">
-	                            <span class="lot__amount"><?=$item['price'];?></span>
-	                            <span class="lot__cost"><?=$item['price'];?><b class="rub">р</b></span>
+	                            <span class="lot__amount">
+	                            <!--  -->
+	                            		<?php $result = num_format($item['price']);
+	                            		print($result);?>
+	                            	</span>
+	                            <span class="lot__cost">
+									<?php $result = num_format($item['price']);
+									print($result);?>
+	                            <b class="rub">р</b></span>
 	                        </div>
 	                        <div class="lot__timer timer">
 
