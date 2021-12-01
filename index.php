@@ -57,8 +57,7 @@
 			return $num_f;
 		}
 	}
-	$result = num_format(1001);
-	print($result);
+
 ?>
 <!DOCTYPE html>
 <html lang="ru">
