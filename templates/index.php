@@ -50,7 +50,12 @@
                                 <b class="rub">р</b></span>
                         </div>
                         <div class="lot__timer timer">
-                            <?php require_once('./functions.php'); print($time_hours . ':' . $time_min); ?>
+                         <!--    <?php 
+                            require_once('./functions.php');
+                            $time_r = remaining($ts);
+                            print($time_r);
+                            ?> -->
+                          <?php require_once('./functions.php'); print($time_hours . ':' . $time_min); ?>  
                         </div>
                     </div>
                 </div>
